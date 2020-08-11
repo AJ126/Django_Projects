@@ -1,0 +1,45 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block style%}
+{%endblock%}
+{%block body%}
+       <h2 class="text-center alert alert-info">all Orders</h2>
+       <div class="row">
+         <div class="col-sm-12">
+            {%if da%}
+       <table class="table" style="color:white;">
+         <thead>
+           <tr style="font-size:25px;">
+             <th class="col">ID</th>
+             <th class="col">NAME</th>
+             <th class="col">CONTACT</th>
+             <th class="col">ADDRESS</th>
+             <th class="col">ORDER</th>
+             <th class="col">ACTION</th>
+           </tr>
+         </thead>
+         {%for d in da%}
+         <tbody>
+           <tr style="font-size:20px;">
+             <td scope='row'>{{d.id}}</td>
+             <td>{{d.name}}</td>
+             <td>{{d.contact}}</td>
+             <td>{{d.address}}</td>
+             <td>{{d.order}}</td>
+             <td>
+               <form method="post" action="{%url 'delete' d.id %}" class="form-inline">
+                 <a href="{%url 'update' d.id %}" class="btn btn-success btn-lg">Edit</a>
+                 {%csrf_token%}
+                 <input type="submit" class="btn btn-danger btn-lg" value="Delete">
+               </form>
+             </td>
+           </tr>
+         </tbody>
+         {%endfor%}
+       </table>
+       {%else%}
+       <h1 class="alert alert-danger">No Records</h1>
+       {%endif%}
+         </div>
+      </div>
+{%endblock%}

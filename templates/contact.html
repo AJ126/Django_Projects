@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block style%}
+<link rel="stylesheet" href="{%static 'css/contact.css'%}">
+{%endblock%}
+{%block body%}
+      <div class="jumbotron" id="jumbotron">
+        <h1 class="display-3">Contact us...</h1>
+        <div class="row">
+          <div class="col-sm-3">
+            <h4  style="font-size:25px;">{{c1}}</h4><br>
+            <h4  style="font-size:25px;">{{c2}}</h4>
+          </div>
+          <div class="col-sm-3">
+            <h4  style="font-size:25px;">{{c3}}</h4><br>
+            <h4  style="font-size:25px;">{{c4}}</h4>
+          </div>
+          <div class="col-sm-5">
+            <p class="text-justify" style="font-size:25px;">If you have any query, message and suggestions then mail us we will response you </p>
+            <p class="alert alert-info text-center" style="color:black;">laturbazzar@gmail.com</p><br>
+            <p class="alert alert-info text-center" style="color:black;">sshoyab004@gmail.com</p>
+          </div>
+        </div>
+      </div>
+{%endblock%}

@@ -1,0 +1,17 @@
+#jumbotron
+{
+  background-color:rgba(0,0,0,0.3);
+  color: white;
+}
+.jumbotron
+{
+  background-color:rgba(0,0,0,0.3);
+  color: white;
+  margin-top:20px;
+  font-weight: bolder;
+	box-shadow: inset -4px -4px rgba(0,0,0,0.5);
+}
+li
+{
+ font-size: 20px;
+}
